@@ -1,5 +1,5 @@
 # flowchart_js_jp_proxy_widget
-jp_proxy_widget class wrapper for [flowchart.js](https://flowchart.js.org/)
+[jp_proxy_widget](https://github.com/AaronWatters/jp_proxy_widget) class wrapper for [flowchart.js](https://flowchart.js.org/)
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/innovationOUtside/flowchart_js_jp_proxy_widget/master)
 
@@ -52,3 +52,5 @@ st(right)->op1(right)->op2
 op2(path1, top)->op1
 op2(path2, right)->e
 ```
+
+If you `import jp_flowchartjs.jp_flowchartjs` the magic will be available.
