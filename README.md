@@ -23,9 +23,10 @@ testEmbed.charter(fcode)
 testEmbed
 ```
 
-- return SVG embed: `testEmbed.get_svg()`
-- return SVG data: `testEmbed.get_svg_data()`
-- return PNG embed: `testEmbed.get_png()`
+- return SVG embed: `testEmbed.embed_svg()`
+- return SVG data: `testEmbed.get_svg()`
+- return PNG embed: `testEmbed.embed_png()`
+- return PNG raw: `testEmbed.getpng()`
 - oneliner return SVG: `FlowchartWidget().charter(fcode, embed=True)`
 
 We can also define a really simple magic:
