@@ -28,14 +28,18 @@ class FlowchartWidget(jp_proxy_widget.JSProxyWidget):
         """Persist SVG state on Python side."""
         self.svg = svg
     
-    def get_svg_data(self):
+    def get_svg(self):
         """Return raw SVG data for flowchart."""
         return self.svg
     
-    def get_svg(self):
+    def embed_svg(self):
         """Return SVG data of flowchart."""
         return SVG(self.svg)
     
     def get_png(self):
+        """Return png of flowchart."""
+        return cairosvg.svg2png(self.svg);
+    
+    def embed_png(self):
         """Return png of flowchart."""
         return Image(cairosvg.svg2png(self.svg));
