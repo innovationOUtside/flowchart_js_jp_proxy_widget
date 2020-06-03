@@ -3,7 +3,10 @@
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/innovationOUtside/flowchart_js_jp_proxy_widget/master?filepath=demo.ipynb)
 
-*There is probably a much cleaner way of importing the js packages and creating a cell magic that can take flowchart descriptions and render them (eg [`anhi/nb-flowchartjs`](https://github.com/anhi/nb-flowchartjs) may provide a clue as to that approach?), but I was testing this approach as a more general pattern. Magic to follow...*
+
+![](flowchart_js_magic.png)
+
+We can also script the production of the flowchart:
 
 ```python
 from jp_flowchartjs.jp_flowchartjs import FlowchartWidget
@@ -54,7 +57,5 @@ op2(path1, top)->op1
 op2(path2, right)->e
 ```
 
-
-![](flowchart_js_magic.png)
 
 If you `import jp_flowchartjs.jp_flowchartjs` the magic will be available.
