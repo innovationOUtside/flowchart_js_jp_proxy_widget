@@ -1,7 +1,7 @@
 # flowchart_js_jp_proxy_widget
 [jp_proxy_widget](https://github.com/AaronWatters/jp_proxy_widget) class wrapper for [flowchart.js](https://flowchart.js.org/)
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/innovationOUtside/flowchart_js_jp_proxy_widget/master)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/innovationOUtside/flowchart_js_jp_proxy_widget/master?filepath=demo.ipynb)
 
 *There is probably a much cleaner way of importing the js packages and creating a cell magic that can take flowchart descriptions and render them (eg [`anhi/nb-flowchartjs`](https://github.com/anhi/nb-flowchartjs) may provide a clue as to that approach?), but I was testing this approach as a more general pattern. Magic to follow...*
 
@@ -53,5 +53,8 @@ st(right)->op1(right)->op2
 op2(path1, top)->op1
 op2(path2, right)->e
 ```
+
+
+![](flowchart_js_magic.png)
 
 If you `import jp_flowchartjs.jp_flowchartjs` the magic will be available.
