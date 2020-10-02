@@ -10,7 +10,7 @@ class FlowchartWidget(jp_proxy_widget.JSProxyWidget):
         e = self.element
         e.empty()
         self.load_js_files(["https://cdnjs.cloudflare.com/ajax/libs/raphael/2.3.0/raphael.min.js",
-                            'https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.13.0/flowchart.js'])
+                            'https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.14.1/flowchart.js'])
         self.uid = None
         self.svg = None
 
