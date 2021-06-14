@@ -1,2 +1,3 @@
 jp_proxy_widget
 cairosvg
+pyflowchart
