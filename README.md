@@ -4,11 +4,18 @@
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/innovationOUtside/flowchart_js_jp_proxy_widget/master?filepath=demo.ipynb)
 
-## IPyhton magic to render `flowchart.js` flowcharts
 
-![](flowchart_js_magic.png)
+## Installation
 
-We can also script the production of the flowchart:
+Installation is currently from Github only:
+
+```
+pip install --upgrade git+https://github.com/innovationOUtside/flowchart_js_jp_proxy_widget.git
+```
+
+## Flowchart widget to render `flowchart.js` flowcharts
+
+Script the production of a flowchart:
 
 ```python
 from jp_flowchartjs.jp_flowchartjs import FlowchartWidget
@@ -50,24 +57,16 @@ FlowchartWidget().charter(fc_text, embed=True)
 
 ## Magics
 
+We can also use magics:
 
-We can also define a couple of really simple magics:
+![](images/flowchart_magic.png)
 
-```python
-from IPython.core.magic import register_cell_magic
 
-@register_cell_magic
-def flowchart_magic(line, cell):
-    "Send code to simulator."
-    return FlowchartWidget().charter(cell, embed=True)
-    
-    
-@register_cell_magic
-def pyflowchart_magic(line, cell):
-    "Generate flowchart code and send to flow charter."
-    fc = Flowchart.from_code(cell)
-    return FlowchartWidget().charter(str(fc.flowchart()), embed=True)
- ```
+Load in the magics:
+
+```
+%load ext jp_flowchartjs 
+```
 
 and then call as:
 
@@ -95,8 +94,3 @@ def demo(msg='demo'):
         print(f'{msg} loopcount is {i}')
         time.sleep(i)
 ```
-
-
-![](images/pyflowchart_magic.png)
-
-If you `import jp_flowchartjs.jp_flowchartjs` the magics will be available.

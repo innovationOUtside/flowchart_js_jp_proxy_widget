@@ -43,3 +43,31 @@ class FlowchartWidget(jp_proxy_widget.JSProxyWidget):
     def embed_png(self):
         """Return png of flowchart."""
         return Image(cairosvg.svg2png(self.svg));
+
+
+from IPython.core.magic import Magics, magics_class, cell_magic
+from pyflowchart import Flowchart
+
+@magics_class
+class FlowchartMagics(Magics):
+    """Magics for flowchart.js """ 
+    def __init__(self, shell):
+        super(FlowchartMagics, self).__init__(shell)
+
+    @cell_magic
+    def flowchart_magic(self, line, cell):
+        "Send code to flow charter."
+        return FlowchartWidget().charter(cell, embed=True)
+
+    @cell_magic
+    def pyflowchart_magic(self, line, cell):
+        "Generate flowchart code and send to flow charter."
+        fc = Flowchart.from_code(cell)
+        return FlowchartWidget().charter(str(fc.flowchart()), embed=True)
+
+def load_ipython_extension(ip):
+    """Load the extension in IPython."""
+    ipython.register_magics(FlowchartMagics)
+    
+ip = get_ipython()
+ip.register_magics(FlowchartMagics)
