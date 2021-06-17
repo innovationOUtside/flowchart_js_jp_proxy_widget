@@ -65,7 +65,7 @@ We can also use magics:
 Load in the magics:
 
 ```
-%load ext jp_flowchartjs 
+%load_ext jp_flowchartjs 
 ```
 
 and then call as:
